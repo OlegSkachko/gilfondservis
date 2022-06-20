@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import UserList from './components/UserList/UserList';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <UserList/>
 }
 
 export default App;
+
+
+// 3) Создать приложение, которое получает список элементов из любого открытого API 
+// https://jsonplaceholder.typicode.com/ - например
+
+// Инструменты:
+// -  Vue/Vuex или react/Redux - на ваше усмотрение
+// -  TypeScript must have!!!
+// -  любой из UI фреймворков для оформления
+
+// В каждом элементе списка должны быть две кнопки "Удалить" и "Изменить"
+
+// По нажатию на кнопку "Удалить" должно появляться модальное окно с подтверждением удаления. После подтверждения элемент должен удалиться из списка (store).
+
+// При нажатии на кнопку "Изменить" должно появляться модальное окно с полной информацией по текущему элементу.  Информацию в каждом поле можно менять, при этом все поля обязательны к заполнению. 
+
+// В модальном окне есть кнопки "Сохранить" "Отмена".
+
+// По нажатию на кнопку "Cохранить" проверяются все поля на корректность заполнения. 
+// Если все заполнено верно, элемент меняется в списке.

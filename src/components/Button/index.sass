@@ -1,0 +1,78 @@
+.divStyle
+    &:hover
+        opacity: 0.7
+
+.loading 
+    position: relative
+    content: 'Loading...'
+    margin: 5px
+    min-width: 20px
+    min-height: 20px 
+    &:not(:required)
+        content: ''
+        border-radius: 50%
+        border: 2px solid gray
+        border-top-color: white
+        border-bottom-color: white
+        animation: spinner .6s linear infinite
+
+@keyframes spinner
+    to 
+        transform: rotate(360deg)
+
+button
+    cursor: pointer
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-around
+    min-width: 50px
+    min-height: 25px
+    text-decoration: none
+    padding: 10px
+    position: relative
+    border-radius: 4px
+    font-family: 'Montserrat', sans-serif
+    background-color: transparent
+    border-color: transparent!important
+    color: white
+
+.primary
+    border: 2px solid #008CBA
+    background-color: #008CBA
+.danger
+    border: 2px solid #f44336
+    background-color: #f44336
+
+.success
+    border: 2px solid #4CAF50
+    background-color: #4CAF50
+
+.warning
+    border: 2px solid rgba(241,140,9,0.5)
+    background-color: rgba(241,140,9,0.5)
+
+.min 
+    min-width: 100px
+    min-height: 40px
+.max
+    min-width: 200px
+    min-height: 80px
+
+.block 
+    width: 100%
+    height: 100%
+
+.outlined
+    border-radius: 4px
+    background-color: transparent
+    &:hover
+        opacity: 0.7
+
+.text
+    opacity: 0
+    &:hover
+        opacity: 0.7
+
+
+
